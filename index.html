@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capital Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+      <div class="loader-text">Loading countries<span class="dots">...</span></div>
+    </div>
+
+    <!-- START SCREEN -->
+    <div id="start-screen" class="hidden">
+      <div class="start-card">
+        <p class="eyebrow">Geography Trivia</p>
+        <h1>Capital<br />Quiz</h1>
+        <p class="subtitle">Guess the capital city from the country name and flag.</p>
+        <button id="start-btn">Start Game</button>
+      </div>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div id="game-screen" class="hidden">
+      <header>
+        <span class="logo">CapitalQuiz</span>
+        <div class="score-box">
+          <span id="score">0</span>
+          <span class="score-label">/ <span id="total">10</span></span>
+        </div>
+      </header>
+
+      <main>
+        <div class="progress-bar-wrap">
+          <div id="progress-bar"></div>
+        </div>
+        <p class="question-counter">Question <span id="q-num">1</span> of <span id="q-total">10</span></p>
+
+        <div class="flag-box">
+          <img id="flag-img" src="" alt="Country flag" />
+        </div>
+
+        <h2 id="country-name">Country Name</h2>
+        <p class="prompt">What is the capital city?</p>
+
+        <div id="options-grid"></div>
+
+        <div id="feedback" class="hidden">
+          <span id="feedback-text"></span>
+        </div>
+
+        <button id="next-btn" class="hidden">Next →</button>
+      </main>
+    </div>
+
+    <!-- END SCREEN -->
+    <div id="end-screen" class="hidden">
+      <div class="end-card">
+        <p class="eyebrow">Game Over</p>
+        <h2 id="final-message">Well done!</h2>
+        <div class="final-score-display">
+          <span id="final-score">0</span>
+          <span class="final-denom">/ <span id="final-total">10</span></span>
+        </div>
+        <button id="restart-btn">Play Again</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
